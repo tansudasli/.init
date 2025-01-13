@@ -21,11 +21,17 @@ wget -O Downloads/dracula+ https://raw.githubusercontent.com/mbadolato/iTerm2-Co
 
 
 # SDKs: java, nodejs, pyhton3
-brew install openjdk@8
-brew install openjdk@17
-echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+# install sdkman to handle java sdk! do not use brew!
+# sdk install java to find latest versions
 
+curl -s "https://get.sdkman.io" | bash
+
+sdk install java 23.0.1-graal
+sdk install java 23.0.1-graalce
+sdk install java 23-open
+sdk install java 25.ea.5-open
+
+###############
 brew install node           # manage js packages w/ npm
 
 brew install --cask anaconda  # manage python packages w/ conda
