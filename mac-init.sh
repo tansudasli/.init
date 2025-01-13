@@ -8,26 +8,15 @@ brew install wget
 # oh-my-zsh - a better terminal and shell(=zsh) !
 # iTerm -> tmux -> zsh | plugins -> oh-my-zsh -> fonts | colors
 # add ssh prompts in theme files!
+# fonts - set in iTerm settings | import the .itermcolor file
 brew install --cask iterm2
 brew install zsh zsh-syntax-highlighting zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp pi.zsh-theme $ZSH_CUSTOM/themes/pi.zsh-theme
 cp .zshrc ~/
 
-#fonts - set in iTerm settings
 wget -O Downloads/dimmedmonokai https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/DimmedMonokai.itermcolors
-
-
-#then, to see localhost name in terminal and ssh, add below lines to ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
-#hide old lines !
-local hostname="%{$fg_bold[black]%}%m"
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
-PROMPT='${hostname} ${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+wget -O Downloads/dracula+ https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Dracula+.itermcolors
 
 
 
