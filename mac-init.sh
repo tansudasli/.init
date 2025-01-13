@@ -5,6 +5,8 @@
 xcode-select --install
 brew install curl
 brew install wget
+brew install --cask google-chrome
+brew install --cask whatsapp
 
 # oh-my-zsh - a better terminal and shell(=zsh) !
 # iTerm -> tmux -> zsh | plugins -> oh-my-zsh -> fonts | colors
@@ -33,37 +35,27 @@ sdk install java 23-open
 sdk install java 25.ea.5-open
 
 ###############
-brew install node           # manage js packages w/ npm
+brew install node  # manage js packages w/ npm
 
-brew install --cask anaconda  # manage python packages w/ conda
-echo 'export PATH="/usr/local/anaconda3/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+brew install --cask miniconda  # manage python packages w/ conda
+conda init zsh
+conda config --add channels conda-forge
 
-conda init zsh                              # <SHELL_NAME> can be bash, zsh …. Then restart terminal
-conda config --add channels conda-forge     # add conda-forge channel for new repository
-
+???????????
 conda env list
 # create a new env.
 conda create --name opencv python=3
 conda activate opencv
 conda install -c conda-forge opencv
 conda deactivate opencv
-
-# conda environments, for spark ...
-echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc
-echo 'export LANG=en_US.UTF-8' >> ~/.zshrc
-
-source ~/.zshrc
+.....
 
 brew install go
 
-# productivity
-brew install --cask google-chrome # open chrome and login w/ google account, sync will be started and takes time
-brew install --cask whatsapp
 
 # IDEs: vscode & intellij
 brew install --cask visual-studio-code
-brew install --cask jetbrains-toolbox   #use toolbox to install intellij, goland etc...
+brew install --cask jetbrains-toolbox
 
 # create your coding directory. use for all git clone ...
 mkdir ~/coding
