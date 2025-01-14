@@ -1,8 +1,8 @@
 # install-initial
 
-use `mac-init.sh` file, and execute step-by-step manually
+use `cat mac-init.sh` file, and execute step-by-step *manually*
 
-## additional files
+### additional files
 
 - .zshrc: zsh config file
 - conda.env.list: environments for ML 
