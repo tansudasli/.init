@@ -4,3 +4,5 @@ ubuntu desktop
 ubuntu live-server
 alpine | standart | virtual 
 
+#sample iso download
+#aria2c -j 3 -s 3 --listen-port=6951-6970 -T ubuntu-24.10-desktop-amd64.iso.torrent
