@@ -10,6 +10,7 @@ brew install curl
 brew install wget
 brew install watch     # watch -n 0.2 curl .... to run continuously
 brew install aria2     # torrent download cli
+#aria2c -j 3 -s 3 --listen-port=6951-6970 -T ubuntu-24.10-desktop-amd64.iso.torrent
 brew install --cask google-chrome
 brew install --cask whatsapp
 
@@ -35,7 +36,7 @@ source .zshrc
 # vscode-github account auth.
 brew install --cask visual-studio-code
 
-# SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts
+# SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
 
 # java
 # sdkman: package manager to handle java sdk
