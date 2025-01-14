@@ -32,7 +32,7 @@ source .zshrc
 # IDEs: vscode & intellij
 # brew install --cask jetbrains-toolbox [2023.x license]
 # 
-# vscode, settings synced [terminal (app,font...), plugins, themes ...]
+# vscode, settings synced [terminal (app=iTerm.app,font.size=13...), window.zoomLevel=0.5, editor.font.size=13, plugins, themes ...]
 # vscode-github account auth.
 brew install --cask visual-studio-code
 
@@ -81,21 +81,26 @@ mkdir ~/Downloads/ISO
 
 
 # virtualization
-# virtualbox, docker
+
+# virtualbox
 # >> download virtualbox from virtualbox.org
+# >> download virtualbox extension pack and configure in virtualbox app.
 
 # docker
-# after opening docker UI, login w/ docker id (or create) or run `docker login`
-# > configure kubectl for a remote k8 cluster. `gcloud container clusters get-credentials $CLUSTER_NAME` will do the job,
-# if you have a GKE cluster on gcp!
+# > create docker hub account
 # > add helm repo for chart repos
-brew install --cask docker     #docker desktop, cli
-brew install kubectl           #kubectl commands
-brew install helm              #k8 package manager + cluster manager
-brew install kompose           #convert docker-compose.yaml to k8s   
+brew install --cask docker     #docker desktop & cli
 
+docker login
 
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+# k8s
+# > configure kubectl for a remote k8 cluster (i.e k8s cluster on gcp). `gcloud container clusters get-credentials $CLUSTER_NAME` will do the job,
+#brew install kubectl           #kubectl commands
+#brew install kompose           #convert docker-compose.yaml to k8s   
+#brew install helm              #k8 package manager + cluster manager
+
+#helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
 
 # below is just a hint. runing kubernetes or minicube is not meaningful on local!!
 # so u need to define remote kubernetes engine
@@ -103,8 +108,9 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 
 #cloud provider CLIs
+# > create gcp account
 #run gcloud init to configure gcp, default project/region/zone
-# run as many as u want, if u need to add more accounts! .)
+#run as many as u want, if u need to add more accounts! .)
 brew install --cask google-cloud-sdk
 
 gcloud init 
@@ -153,12 +159,4 @@ brew install ansible
 # ethereum & blockchain
 npm install -g truffle
 npm install -g ganache-cli
-
-
-
-
-
-
-
-
 
