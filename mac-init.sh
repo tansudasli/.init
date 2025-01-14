@@ -35,7 +35,7 @@ source .zshrc
 # vscode-github account auth.
 brew install --cask visual-studio-code
 
-# SDKs: java, nodejs, pyhton3
+# SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts
 
 # java
 # sdkman: package manager to handle java sdk
@@ -71,7 +71,7 @@ brew install go
 #C, C++
 #cLang is preferable for Mac
 brew install gcc      # c,c++ compiler
-brew install cmake    # build tool for C, C++
+brew install cmake    # build manager for C, C++
 
 # create your coding directory. 
 # download from repository by git clone ...
