@@ -38,7 +38,7 @@ brew install --cask visual-studio-code
 # SDKs: java, nodejs, pyhton3
 
 # java
-# sdkman (package manager) to handle java sdk
+# sdkman: package manager to handle java sdk
 # sdk install java [graalce & open's last stable, open's early-access]
 curl -s "https://get.sdkman.io" | bash
 
@@ -49,7 +49,7 @@ sdk install java 25.ea.5-open
 brew install gradle    # build manager for java
 
 # python
-# manage python packages w/ conda
+# conda: package manager for python packages
 # add conda-forge as repository
 # create environments
 
@@ -110,7 +110,7 @@ gcloud init
 
 
 # nodejs
-# manage js packages w/ npm
+# npm: package manager for js packages
 brew install node 
 
 sudo npm i -g typescript ts-node
