@@ -1,10 +1,15 @@
 # homebrew: package manager
+# manual installation for [virtualbox, virtualbox-extension-pack, sdkman, sketch 91.4, sketch-toolbox ...]
+# use npm package manager for js things [ts, angular, firebase ...]
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # common
-xcode-select --install
+#brew install --cask balenaetcher # make bootable usbs from iso file
+xcode-select --install # mac development cli: clang etc...
 brew install curl
 brew install wget
+brew install watch     # watch -n 0.2 curl .... to run continuously
+brew install aria2     # torrent download cli
 brew install --cask google-chrome
 brew install --cask whatsapp
 
@@ -14,60 +19,69 @@ brew install --cask whatsapp
 # fonts - set in iTerm settings | import the .itermcolor file
 brew install --cask iterm2
 brew install zsh zsh-syntax-highlighting zsh-autosuggestions
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 cp pi.zsh-theme $ZSH_CUSTOM/themes/pi.zsh-theme
 cp .zshrc ~/
 
 wget -O Downloads/dimmedmonokai https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/DimmedMonokai.itermcolors
 wget -O Downloads/dracula+ https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Dracula+.itermcolors
 
-
-
-# SDKs: java, nodejs, pyhton3
-# install sdkman to handle java sdk! do not use brew!
-# sdk install java to find latest versions
-
-curl -s "https://get.sdkman.io" | bash
-
-sdk install java 23.0.1-graal
-sdk install java 23.0.1-graalce
-sdk install java 23-open
-sdk install java 25.ea.5-open
-
-###############
-brew install node  # manage js packages w/ npm
-
-brew install --cask miniconda  # manage python packages w/ conda
-conda init zsh
-conda config --add channels conda-forge
-
-???????????
-conda env list
-# create a new env.
-conda create --name opencv python=3
-conda activate opencv
-conda install -c conda-forge opencv
-conda deactivate opencv
-.....
-
-brew install go
-
+source .zshrc
 
 # IDEs: vscode & intellij
+# brew install --cask jetbrains-toolbox [2023.x license]
+# 
+# vscode, settings synced [terminal (app,font...), plugins, themes ...]
+# vscode-github account auth.
 brew install --cask visual-studio-code
-brew install --cask jetbrains-toolbox
 
-# create your coding directory. use for all git clone ...
+# SDKs: java, nodejs, pyhton3
+
+# java
+# sdkman (package manager) to handle java sdk
+# sdk install java [graalce & open's last stable, open's early-access]
+curl -s "https://get.sdkman.io" | bash
+
+sdk install java 23.0.1-graalce
+sdk install java 23-open
+sdk install java 25.ea.5-open 
+
+brew install gradle    # build manager for java
+
+# python
+# manage python packages w/ conda
+# add conda-forge as repository
+# create environments
+
+brew install --cask miniconda    
+conda init "$(basename "${SHELL}")"
+conda config --add channels conda-forge
+
+# create env list using conda.env.list
+#cat conda.env.list
+#conda env list
+#conda create --name opencv python=3
+#conda activate opencv
+#conda install -c conda-forge opencv
+#conda deactivate opencv
+
+#golang
+brew install go
+
+#C, C++
+#cLang is preferable for Mac
+brew install gcc      # c,c++ compiler
+brew install cmake    # build tool for C, C++
+
+# create your coding directory. 
+# download from repository by git clone ...
 mkdir ~/coding
 mkdir ~/Downloads/ISO
 
-# some settings in intellij
-#- activate intellij w/ jb account (activates all products)
-#- enter prereferences at intellij, then search github, add account w/ token. 
-#  regreate the token in github. and define in intellij/goland/ ...etc
 
-brew install --cask virtualbox
-brew install --cask virtualbox-extension-pack
+# virtualization
+# virtualbox, docker
+# >> download virtualbox from virtualbox.org
 
 # docker
 # after opening docker UI, login w/ docker id (or create) or run `docker login`
@@ -87,28 +101,20 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 # Read if you need ---> configure GKE cluster to access from your local machine: https://kubernetes.io/docs/tasks/tools/install-kubectl/"
 
 
-#CLIs
-# run gcloud init to configure gcp cli
-brew install --cask google-cloud-sdk
-brew install awscli
-brew install azure-cli
-
-
-echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'"  >> ~/.zshrc
-echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'"  >> ~/.zshrc
-source ~/.zshrc
-
-# to configure gcp, default project/region/zone
+#cloud provider CLIs
+#run gcloud init to configure gcp, default project/region/zone
 # run as many as u want, if u need to add more accounts! .)
+brew install --cask google-cloud-sdk
+
 gcloud init 
 
-# dart
-brew tap dart-lang/dart
-brew install dart
 
 # nodejs
+# manage js packages w/ npm
+brew install node 
+
 sudo npm i -g typescript ts-node
-sudo npm i -g @angular/cli
+sudo npm i -g @angular/cli     # angular 
 sudo npm i -g nodemon
 sudo npm i -g firebase-tools   # firebase
 sudo npm i -g marked
@@ -116,17 +122,20 @@ sudo npm i -g workbox-cli      # service worker generation
 sudo npm i -g cli-real-favicon # favicon/mstile/android/appletouch generation
 sudo npm i -g parcel-bundler   # run typescript code in browser directly
 
-# install xcode from apple-app-store !!! for flutter, u need it ..
 
-brew tap MiderWong/flutter
-brew install flutter
-echo 'export PATH="/usr/local/opt/flutter/bin:$PATH"' >> ~/.zshrc
+# flutter
+# dart
+brew install dart-sdk
+
+brew install --cask flutter
 flutter config --no-analytics
 flutter doctor
 
-#  UI/UX
-brew install --cask sketch   #then enter license key
-brew install --cask sketch-toolbox
+# UI/UX
+# download sketch, sketch tool box
+# enter licences
+# install plugins
+brew install --cask sketch@91.4
 brew install --cask skyfonts
 
 # install material.sketch (Baseline.sketch) plugin 
@@ -144,18 +153,11 @@ brew install ansible
 npm install -g truffle
 npm install -g ganache-cli
 
-# add an alies: git logs
-git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# some utilities 
-brew install watch  # watch -n 0.2 curl .... to run continuously
 
-# openstack
-brew install --cask balenaetcher #make bootable usbs from iso file
 
-#embedded 
-brew install gcc   #c,c++ compiler
-brew install cmake #cmake compiler
 
-# torrent download cli
-brew install aria2
+
+
+
+
