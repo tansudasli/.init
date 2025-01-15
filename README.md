@@ -1,6 +1,7 @@
 # install-initial
 
-use `cat mac-init.sh` file, and execute step-by-step *manually*
+use `cat mac-init.sh` or `cat ubuntu-init.sh` file, and execute step-by-step *manually*.
+
 
 ### additional files
 

@@ -9,6 +9,8 @@
 # common
 #brew install --cask balenaetcher # make bootable usbs from iso file
 xcode-select --install # mac development cli: clang etc...
+brew install htop
+brew install nvtop
 brew install curl
 brew install wget
 brew install watch     # watch -n 0.2 curl .... to run continuously
@@ -144,7 +146,6 @@ npm install -g ganache-cli
 
 # docker
 # > create docker hub account
-# > add helm repo for chart repos
 brew install --cask docker     #docker desktop & cli
 
 docker login
