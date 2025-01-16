@@ -1,0 +1,44 @@
+# db
+docker pull mysql:latest
+docker pull postgres:latest
+docker pull redis:latest
+docker pull apache/druid:31.0.1
+
+docker pull opensearchproject/opensearch-dashboards
+docker pull opensearchproject/opensearch
+
+# ML
+docker pull spark
+docker pull tensorflow/tensorflow:latest
+docker pull tensorflow/serving
+docker pull ceph/ceph:v16
+docker pull apache/airflow
+docker pull apache/beam_python3.8_sdk
+
+docker pull fluent/fluentd:v1.18-debian-1
+docker pull fluent/fluent-bit:latest
+docker pull grafana/grafana:latest
+
+docker pull apache/kafka:latest
+docker pull rabbitmq
+
+#os
+docker pull alpine
+docker pull ubuntu
+
+docker pull ubuntu/prometheus:latest
+
+
+
+# check later
+curl -O https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.3_amd64.deb
+curl -O https://dl.grafana.com/enterprise/release/grafana-enterprise-10.2.3.darwin-amd64.tar.gz
+curl -O https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh
+curl -O https://github.com/redis/redis/archive/7.2.3.tar.gz
+curl -O https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.catalina.x86_64.zip?_gl=1*tiofmj*_ga*NTk4NDI0Mjk5LjE2NTA3Mjg4NTE.*_ga_8BKGRQKRPV*MTcwNDY1ODYwMi4xLjEuMTcwNDY1OTE0Mi40My4wLjA.*_gcl_au*MTc4OTIzMDEzOS4xNzA0NjU4NjAy
+curl -O https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.focal.x86_64.tar.gz?_gl=1*1kyr98q*_ga*NTk4NDI0Mjk5LjE2NTA3Mjg4NTE.*_ga_8BKGRQKRPV*MTcwNDY1ODYwMi4xLjEuMTcwNDY1OTE0Mi40My4wLjA.*_gcl_au*MTc4OTIzMDEzOS4xNzA0NjU4NjAy
+curl -O https://github.com/prometheus/prometheus/releases/download/v2.49.0-rc.1/prometheus-2.49.0-rc.1.linux-amd64.tar.gz
+curl -O https://github.com/prometheus/prometheus/releases/download/v2.49.0-rc.1/prometheus-2.49.0-rc.1.darwin-amd64.tar.gz
+curl -O https://github.com/prometheus/alertmanager/releases/download/v0.26.0/alertmanager-0.26.0.darwin-amd64.tar.gz
+curl -O https://github.com/prometheus/alertmanager/releases/download/v0.26.0/alertmanager-0.26.0.linux-amd64.tar.gz
+
