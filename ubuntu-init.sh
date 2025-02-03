@@ -17,24 +17,24 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
      && sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
-sudo snap install whatsapp-linux-app
+#sudo snap install whatsapp-linux-app
 
 # oh-my-zsh - a better terminal and shell(=zsh) !
 # iTerm -> tmux -> zsh | plugins -> oh-my-zsh -> fonts | colors
 # add ssh prompts in theme files!
 
-sudo apt install zsh 
+sudo apt install zsh # then logout and login again
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
-
+cd coding/.init
 cp pi.zsh-theme $ZSH_CUSTOM/themes/pi.zsh-theme
 cp .zshrc ~/
 
 # > install Nerd fonts
 
-source .zshrc
+source ~/.zshrc
 
 # ansible
 # use ~/.ansible as home
