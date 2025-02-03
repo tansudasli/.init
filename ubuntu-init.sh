@@ -86,7 +86,8 @@ sdk install gradle 8.12.1    # build manager for java
 # create environments
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
      && bash Miniconda3-latest-Linux-x86_64.sh
-  
+
+source ~/miniconda3/bin/activate
 conda init "$(basename "${SHELL}")"
 conda config --add channels conda-forge
 
@@ -122,12 +123,13 @@ gcloud init
 
 # nodejs
 # npm: package manager for js packages
-brew install nodejs 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install 22
 
 sudo npm i -g typescript ts-node
-sudo npm i -g @angular/cli     # angular 
+npm i -g @angular/cli     # angular 
 sudo npm i -g nodemon
-sudo npm i -g firebase-tools   # firebase
+npm i -g firebase-tools   # firebase
 sudo npm i -g marked
 sudo npm i -g workbox-cli      # service worker generation
 sudo npm i -g cli-real-favicon # favicon/mstile/android/appletouch generation
