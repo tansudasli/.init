@@ -65,6 +65,8 @@ mkdir ~/Downloads/ISO
 # 
 # vscode, settings synced [terminal (app=iTerm.app,font.size=13...), window.zoomLevel=0.5, editor.font.size=13, plugins, themes ...]
 # vscode-github account auth.
+# git config --global user.name ....
+# git config --global user.mail ....
 sudo snap install code --classic
 
 # SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
