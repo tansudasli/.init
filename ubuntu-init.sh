@@ -10,7 +10,7 @@ sudo apt update && upgrade -y
 #brew install --cask balenaetcher # make bootable usbs from iso file
 #
 sudo apt install apt-transport-https ca-certificates gnupg
-sudo apt install curl wget watch aria2 htop nvtop nmap locate -y
+sudo apt install curl wget watch aria2 htop nvtop nmap locate git -y
 
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
@@ -50,17 +50,13 @@ sudo snap install google-cloud-cli --classic
 
 gcloud init 
 
-# customizations ?do we still need, check
-# search some keywords solid calor desktop; bottom dock; size etc...
-# sudo apt-get install dconf-editor      
-# sudo apt install gnome-tweaks               #then, install dashtodock gnome extention
-# sudo apt install gnome-shell-extensions
+# customizations
+# search some keywords solid calor desktop : org.gnome.desktop.background=#ffbd31; 
+sudo apt-get install dconf-editor 
 
-# sudo add-apt-repository ppa:numix/ppa
-# sudo apt update
-# sudo apt install numix-icon-theme-circle    #then, gnome-tweak/appearance/icons
-
-
+# shortcuts
+# in terminal, change copy and paste shortcuts (remove shift+ key)
+# in settings/keyboards, change search as windows+space (like macos)
 
 # ****** coding ***************
 
