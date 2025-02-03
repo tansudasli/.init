@@ -24,6 +24,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 sudo apt install tmux
 cp ~/coding/.init/.tmux.conf ~/tmux.conf
 tmux source-file ~/.tmux.conf
+# > in terminal settings, run tmux as command
 
 sudo apt install zsh # then logout and login again
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
