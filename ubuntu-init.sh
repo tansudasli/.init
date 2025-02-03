@@ -78,7 +78,7 @@ sdk install java 23.0.1-graalce
 sdk install java 23-open
 sdk install java 25.ea.5-open 
 
-brew install gradle    # build manager for java
+sdk install gradle 8.12.1    # build manager for java
 
 # python
 # conda: package manager for python packages
