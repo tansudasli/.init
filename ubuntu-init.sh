@@ -10,14 +10,7 @@ sudo apt update && upgrade -y
 #brew install --cask balenaetcher # make bootable usbs from iso file
 #
 sudo apt install apt-transport-https ca-certificates gnupg
-sudo apt install curl  \
-                 wget  \
-                 watch \
-                 aria2 \ 
-                 htop  \
-                 nvtop \
-                 nmap  \
-                 locate -y
+sudo apt install curl wget watch aria2 htop nvtop nmap locate -y
 
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
