@@ -38,20 +38,6 @@ cp .zshrc ~/
 
 source ~/.zshrc
 
-# ansible
-# use ~/.ansible as home
-# create seperate inventory file and set in ansible command always
-# use service account private key
-sudo apt install ansible -y
-
-#cloud provider CLIs
-# > create gcp account
-#run gcloud init to configure gcp, default project/region/zone
-#run as many as u want, if u need to add more accounts! .)
-sudo snap install google-cloud-cli --classic
-
-gcloud init 
-
 # customizations
 # set solid color for background
 sudo apt-get install dconf-editor # set org.gnome.desktop.background=#ffbd31; 
@@ -119,6 +105,19 @@ sudo apt install golang
 sudo apt install gcc      # c,c++ compiler
 sudo apt install cmake    # build manager for C, C++
 
+# ansible
+# use ~/.ansible as home
+# create seperate inventory file and set in ansible command always
+# use service account private key
+sudo apt install ansible -y
+
+#cloud provider CLIs
+# > create gcp account
+#run gcloud init to configure gcp, default project/region/zone
+#run as many as u want, if u need to add more accounts! .)
+sudo snap install google-cloud-cli --classic
+
+gcloud init 
 
 # nodejs
 # npm: package manager for js packages
