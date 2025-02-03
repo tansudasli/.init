@@ -51,8 +51,8 @@ sudo snap install google-cloud-cli --classic
 gcloud init 
 
 # customizations
-# search some keywords solid calor desktop : org.gnome.desktop.background=#ffbd31; 
-sudo apt-get install dconf-editor 
+sudo apt-get install dconf-editor # search some keywords solid calor desktop : org.gnome.desktop.background=#ffbd31; 
+sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manager # open extention-manager, install x11 gestures
 
 # shortcuts
 # in terminal, change copy and paste shortcuts (remove shift+ key)
