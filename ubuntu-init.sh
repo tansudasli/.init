@@ -12,7 +12,6 @@ sudo apt update && upgrade -y
 sudo apt install apt-transport-https ca-certificates gnupg
 sudo apt install curl wget watch aria2 htop nvtop nmap locate git -y
 
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
      && sudo dpkg -i google-chrome-stable_current_amd64.deb
 
@@ -32,7 +31,7 @@ cd coding/.init
 cp pi.zsh-theme $ZSH_CUSTOM/themes/pi.zsh-theme
 cp .zshrc ~/
 
-# > install Nerd fonts
+# > change terminal settings, fonts, colors, cursor 
 
 source ~/.zshrc
 
@@ -51,10 +50,14 @@ sudo snap install google-cloud-cli --classic
 gcloud init 
 
 # customizations
-# set solid color for backgroung
+# set solid color for background
+sudo apt-get install dconf-editor # set org.gnome.desktop.background=#ffbd31; 
+
 # set touchpad gestures
-sudo apt-get install dconf-editor # search some keywords solid calor desktop : org.gnome.desktop.background=#ffbd31; 
-sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manager touchegg # open extention-manager, install x11 gestures
+sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manager # open extention-manager, install x11 gestures
+sudo add-apt-repository ppa:touchegg/stable
+sudo apt update
+sudo apt install touchegg # run touchegg
 
 # shortcuts
 # in terminal, change copy and paste shortcuts (remove shift+ key)
