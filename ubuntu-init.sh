@@ -196,15 +196,9 @@ sudo apt install libnss-libvirt -y
 # docker cli: use podman
 sudo apt install podman
 
-
-sudo groupadd docker
-sudo usermod -aG docker $USER
-
-docker login
-
 #disable auto start on boot
-sudo systemctl disable docker.service
-sudo systemctl disable containerd.service
+sudo systemctl disable podman.service
+sudo systemctl disable podman.socket
 
 # k8s
 # > configure kubectl for a remote k8 cluster (i.e k8s cluster on gcp). `gcloud container clusters get-credentials $CLUSTER_NAME` will do the job,
