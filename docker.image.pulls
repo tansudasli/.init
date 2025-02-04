@@ -1,44 +1,36 @@
+# use podman as docker cli
+#
 # db
-docker pull mysql:latest
-docker pull postgres:latest
-docker pull redis:latest
-docker pull apache/druid:31.0.1
+podman pull docker.io/mysql
+podman pull docker.io/postgres
+podman pull docker.io/redis
+podman pull docker.io/redis/redis-stack-server
+podman pull docker.io/apache/druid:31.0.1
 
-docker pull opensearchproject/opensearch-dashboards
-docker pull opensearchproject/opensearch
+podman pull docker.io/opensearchproject/opensearch-dashboards
+podman pull docker.io/opensearchproject/opensearch
 
 # ML
-docker pull spark
-docker pull tensorflow/tensorflow:latest
-docker pull tensorflow/serving
-docker pull ceph/ceph:v16
-docker pull apache/airflow
-docker pull apache/beam_python3.8_sdk
+podman pull docker.io/apache/spark
+podman pull docker.io/tensorflow/tensorflow
+podman pull docker.io/tensorflow/serving
+podman pull docker.io/ceph/ceph:v16
+podman pull docker.io/apache/airflow
+podman pull docker.io/apache/beam_python3.8_sdk
 
-docker pull fluent/fluentd:v1.18-debian-1
-docker pull fluent/fluent-bit:latest
-docker pull grafana/grafana:latest
+podman pull docker.io/fluent/fluentd:v1.18-debian-1
+podman pull docker.io/fluent/fluent-bit
+podman pull docker.io/grafana/grafana
 
-docker pull apache/kafka:latest
-docker pull rabbitmq
+podman pull docker.io/apache/kafka
+podman pull docker.io/rabbitmq
 
 #os
-docker pull alpine
-docker pull ubuntu
+podman pull docker.io/alpine
+podman pull docker.io/ubuntu
 
-docker pull ubuntu/prometheus:latest
+podman pull docker.io/nginx
 
-
-
-# check later
-curl -O https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.3_amd64.deb
-curl -O https://dl.grafana.com/enterprise/release/grafana-enterprise-10.2.3.darwin-amd64.tar.gz
-curl -O https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh
-curl -O https://github.com/redis/redis/archive/7.2.3.tar.gz
-curl -O https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.catalina.x86_64.zip?_gl=1*tiofmj*_ga*NTk4NDI0Mjk5LjE2NTA3Mjg4NTE.*_ga_8BKGRQKRPV*MTcwNDY1ODYwMi4xLjEuMTcwNDY1OTE0Mi40My4wLjA.*_gcl_au*MTc4OTIzMDEzOS4xNzA0NjU4NjAy
-curl -O https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.focal.x86_64.tar.gz?_gl=1*1kyr98q*_ga*NTk4NDI0Mjk5LjE2NTA3Mjg4NTE.*_ga_8BKGRQKRPV*MTcwNDY1ODYwMi4xLjEuMTcwNDY1OTE0Mi40My4wLjA.*_gcl_au*MTc4OTIzMDEzOS4xNzA0NjU4NjAy
-curl -O https://github.com/prometheus/prometheus/releases/download/v2.49.0-rc.1/prometheus-2.49.0-rc.1.linux-amd64.tar.gz
-curl -O https://github.com/prometheus/prometheus/releases/download/v2.49.0-rc.1/prometheus-2.49.0-rc.1.darwin-amd64.tar.gz
-curl -O https://github.com/prometheus/alertmanager/releases/download/v0.26.0/alertmanager-0.26.0.darwin-amd64.tar.gz
-curl -O https://github.com/prometheus/alertmanager/releases/download/v0.26.0/alertmanager-0.26.0.linux-amd64.tar.gz
+podman pull docker.io/ubuntu/prometheus
+podman pull docker.io/ubuntu/alertmanager:0.28.0-24.04_stable
 
