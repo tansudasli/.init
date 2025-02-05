@@ -63,11 +63,15 @@ mkdir ~/Downloads/ISO
 # IDEs: vscode & intellij
 # brew install --cask jetbrains-toolbox [2023.x license]
 # 
-# vscode, settings synced [terminal (app=iTerm.app,font.size=13...), window.zoomLevel=0.5, editor.font.size=13, plugins, themes ...]
+# vscode
+# most settings synced: [terminal (app=iTerm.app,font.size=13, editor.font.size=13, plugins, themes), 
+# not syned settings: [window.zoomLevel=0.5]
+# defined profiles: default (coding etc...) and aurduino (install platformio extention here!)
 # vscode-github account auth.
 # git config --global user.name ....
 # git config --global user.mail ....
 sudo snap install code --classic
+sudo apt install python3-venv   #requires for platformio, install in base env!
 
 # SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
 

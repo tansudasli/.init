@@ -57,8 +57,13 @@ mkdir ~/Downloads/ISO
 # IDEs: vscode & intellij
 # brew install --cask jetbrains-toolbox [2023.x license]
 # 
-# vscode, settings synced [terminal (app=iTerm.app,font.size=13...), window.zoomLevel=0.5, editor.font.size=13, plugins, themes ...]
+# vscode 
+# most settings synced: [terminal (app=iTerm.app,font.size=13, editor.font.size=13, plugins, themes), 
+# not syned settings: [window.zoomLevel=0.5]
+# defined profiles: default (coding etc...) and aurduino (install platformio extention here!)
 # vscode-github account auth.
+# git config --global user.name ....
+# git config --global user.mail ....
 brew install --cask visual-studio-code
 
 # SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
