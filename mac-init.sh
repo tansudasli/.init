@@ -149,6 +149,13 @@ npm install -g ganache-cli
 # >> download virtualbox from virtualbox.org
 # >> download virtualbox extension pack and configure in virtualbox app.
 
+# can we replace docker w/ podman
+brew install podman
+
+sudo chown -R $(whoami) ~/.config
+podman machine init  # create vm for macos 
+podman machine start # starting podman demons
+
 # docker
 # > create docker hub account
 brew install --cask docker     #docker desktop & cli
