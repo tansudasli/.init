@@ -66,6 +66,10 @@ mkdir ~/Downloads/ISO
 # git config --global user.mail ....
 brew install --cask visual-studio-code
 
+#activate git lfs for large file support
+brew install git-lfs
+git lfs install  #then add .gitattributes in ur repo!
+
 # SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
 
 # java
