@@ -55,10 +55,6 @@ sudo apt install touchegg # run touchegg
 
 # ****** coding ***************
 
-#install git lsf for large file support
-sudo apt install git-lfs
-git lfs install  #then add .gitattributes in ur repo!
-
 # create your coding directory. 
 # download from repository by git clone ...
 mkdir ~/coding
