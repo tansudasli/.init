@@ -14,6 +14,7 @@ podman pull docker.io/opensearchproject/opensearch
 podman pull docker.io/apache/spark
 podman pull docker.io/tensorflow/tensorflow
 podman pull docker.io/tensorflow/serving
+podman pull docker.io/tensorflow/tfx
 podman pull docker.io/ceph/ceph:v16
 podman pull docker.io/apache/airflow
 podman pull docker.io/apache/beam_python3.8_sdk
