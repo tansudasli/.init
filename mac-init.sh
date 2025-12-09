@@ -66,6 +66,7 @@ mkdir ~/Downloads/ISO
 # git config --global user.mail ....
 brew install --cask visual-studio-code
 
+
 # SDKs: C/C++, java, nodejs, pyhton3, dart, flutter, ts, golang
 
 # java
@@ -148,6 +149,13 @@ npm install -g ganache-cli
 # virtualbox
 # >> download virtualbox from virtualbox.org
 # >> download virtualbox extension pack and configure in virtualbox app.
+
+# can we replace docker w/ podman
+brew install podman
+
+sudo chown -R $(whoami) ~/.config
+podman machine init  # create vm for macos 
+podman machine start # starting podman demons
 
 # docker
 # > create docker hub account
