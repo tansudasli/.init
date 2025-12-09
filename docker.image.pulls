@@ -17,9 +17,9 @@ podman pull docker.io/tensorflow/serving
 podman pull docker.io/tensorflow/tfx
 podman pull docker.io/ceph/ceph:v16
 podman pull docker.io/apache/airflow
-podman pull docker.io/apache/beam_python3.8_sdk
+podman pull docker.io/apache/beam_python3.12_sdk
 
-podman pull docker.io/fluent/fluentd:v1.18-debian-1
+podman pull docker.io/fluent/fluentd:latest
 podman pull docker.io/fluent/fluent-bit
 podman pull docker.io/grafana/grafana
 
