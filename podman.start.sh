@@ -4,3 +4,4 @@ sudo systemctl start podman.service
 
 #mac
 podman machine start
+# podman machine stop
