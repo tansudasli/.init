@@ -3,11 +3,9 @@
 #
 # 
 # to upgrade OS
-#sudo do-release-upgrade
 sudo apt update && upgrade -y
+#sudo do-release-upgrade
 
-# common
-#brew install --cask balenaetcher # make bootable usbs from iso file
 #
 sudo apt install apt-transport-https ca-certificates gnupg
 sudo apt install curl wget watch aria2 htop nvtop nmap locate git -y
